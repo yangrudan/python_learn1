@@ -10,11 +10,18 @@
 def doubleNum(intVal):
     return (2*intVal)
 
+#再次封装for循环输出结果，以便给其他模块使用
+def forDoubleNum(startVal, stopVal, step):
+    # 建立一个空字典
+    dicRet = {}
+    for i in range(startVal, stopVal, step): #设定开始,结束，步长.
+        dicRet[str(i)] = doubleNum(i)
+    return dicRet
+
+
 if __name__ == '__main__':
-    #建立一个空字典
-    dic = {}
-    for i in range(500, 1000, 100): #设定开始,结束，步长.
-        dic[str(i)] = doubleNum(i)
+    dic = forDoubleNum(500, 1000, 100)
+
     print(f"dic[500] = {dic[str(500)]}")
     print(f"dic[600] = {dic[str(600)]}")
     print(f"dic[700] = {dic[str(700)]}")
