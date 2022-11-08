@@ -6,3 +6,4 @@ with open(path,'r',encoding='utf-8') as text:
  print(words)
  for word in words:
      print('{}-{} times'.format(word,words.count(word)))
+
