@@ -1,0 +1,5 @@
+%template(Raw_Data_2*2*2) std::array<float,2*2*2>
+%extend eprosima::fastdds::dds::LoanableSequence<Raw_Data,std::>
+%template(Raw_Data_10*10*10) std::array<float,10*10*10>
+%template(Raw_Data_10000) std::array<float,10000>
+%template(Raw_Data_10*10*10) std::array<float,10*10*10>
