@@ -9,6 +9,7 @@
 函数说明：
 针对fastddsGen生成的.i文件内前面一半的*进行修改和提取;
 V2.0  支持+ * / 三种符号的查找和替换
+      !!注意不能对同一个文件执行两次，二次运行会造成错误，多次替换后面正常表达式的内容
 
 
 .i文档内容比如这样：
@@ -34,6 +35,10 @@ import re
 import os
 #便于运维和测试，传入系统参数
 import sys
+#划分日志等级
+import logging
+
+logging.basicConfig(level=logging.CRITICAL, format=' %(asctime)s -%(levelname)s -%(message)s')
 
 #打开文件进行处理,写入新文件
 def extract_change(oldFileName):
@@ -45,7 +50,7 @@ def extract_change(oldFileName):
 
     for line in lines:
         if line.startswith('%template'):
-            print(line)
+            logging.debug(str(line))
             newLine = change_half_symbol(line)
             fnew.write(newLine)
         else:
