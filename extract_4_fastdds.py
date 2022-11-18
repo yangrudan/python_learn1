@@ -7,7 +7,9 @@
 """
 '''
 函数说明：
-针对fastddsGen生成的.i文件内前面一半的*进行修改和提取
+针对fastddsGen生成的.i文件内前面一半的*进行修改和提取;
+V2.0  支持+ * / 三种符号的查找和替换
+
 
 .i文档内容比如这样：
 %template(Raw_Data_2*2*2) std::array<float,2*2*2>
@@ -17,7 +19,9 @@
 %template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
 %template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
 %template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
-
+%template(Raw_Data_10+10+10+20) std::array<float,10+10+10+20>
+%template(Raw_Data_10/10/10/20) std::array<float,10/10/10/20>
+%template(Raw_Data_10*10+10/20) std::array<float,10*10+10/20>
 
 tips:
 1） 建立临时bak文件进行文件编辑
@@ -59,11 +63,20 @@ def change_half_symbol(strInput):
     num_symbol = str(strInput).count('*')
     if num_symbol > 0:
         num_replace = int(num_symbol / 2)
-        strOutput = strInput.replace('*', '_', num_replace)
-        print(f"222222{strOutput} is {num_symbol}")
-        return strOutput
-    else:
-        return strInput
+        strInput = strInput.replace('*', '_', num_replace)
+
+    num_symbol = str(strInput).count('+')
+    if num_symbol > 0:
+        num_replace = int(num_symbol / 2)
+        strInput = strInput.replace('+', '_', num_replace)
+
+    num_symbol = str(strInput).count('/')
+    if num_symbol > 0:
+        num_replace = int(num_symbol / 2)
+        strInput = strInput.replace('/', '_', num_replace)
+
+    return strInput
+
 
 def main(argv):
     if os.path.exists(argv[1]):

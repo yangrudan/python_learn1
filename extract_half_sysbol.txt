@@ -1,8 +1,10 @@
-%template(Raw_Data_2*2*2) std::array<float,2*2*2>
+%template(Raw_Data_2_2_2) std::array<float,2*2*2>
 %extend eprosima::fastdds::dds::LoanableSequence<Raw_Data,std::>
-%template(Raw_Data_10*10*10) std::array<float,10*10*10>
+%template(Raw_Data_10_10_10) std::array<float,10*10*10>
 %template(Raw_Data_10000) std::array<float,10000>
-%template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
-%template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
-%template(Raw_Data_10*10*10*20) std::array<float,10*10*10*20>
-
+%template(Raw_Data_10_10_10_20) std::array<float,10*10*10*20>
+%template(Raw_Data_10_10_10_20) std::array<float,10*10*10*20>
+%template(Raw_Data_10_10_10_20) std::array<float,10*10*10*20>
+%template(Raw_Data_10_10_10_20) std::array<float,10+10+10+20>
+%template(Raw_Data_10_10_10_20) std::array<float,10/10/10/20>
+%template(Raw_Data_10_10_10_20) std::array<float,10*10+10/20>
