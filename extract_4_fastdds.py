@@ -27,7 +27,7 @@ V2.0  支持+ * / 三种符号的查找和替换
 tips:
 1） 建立临时bak文件进行文件编辑
 2） 删除原有文件进行bak替换
-3) D:\yangrudan\PyPrj>python extract_4_fastdds.py "extract_half_sysbol.txt"【命令行的使用】
+3) D:\PyPrj>python extract_4_fastdds.py "extract_half_sysbol.txt"【命令行的使用】
 '''
 #导入正则表达式模块
 import re
