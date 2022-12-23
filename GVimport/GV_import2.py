@@ -8,5 +8,8 @@
 """
 
 from GV import g_intVal
-globals()['g_intVal'] = globals()['g_intVal']+100
-print("file-1", globals()['g_intVal'])
+
+def GetGvVal2():
+    print("file-import2", globals()['g_intVal'])
+# globals()['g_intVal'] = globals()['g_intVal']+100
+# print("file-1", globals()['g_intVal'])

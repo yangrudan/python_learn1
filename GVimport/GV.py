@@ -8,6 +8,6 @@
 """
 
 global g_intVal
-g_intVal = 10
+g_intVal = 1
 
 print("====================This is GV fire========================")
