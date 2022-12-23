@@ -10,6 +10,8 @@
 from GV import g_intVal
 
 def GetGvVal2():
-    print("file-import2", globals()['g_intVal'])
+    global g_intVal
+    print("file-import2", g_intVal)
+    # print("file-import2", globals()['g_intVal'])
 # globals()['g_intVal'] = globals()['g_intVal']+100
 # print("file-1", globals()['g_intVal'])

@@ -9,6 +9,9 @@
 
 from GV import g_intVal
 
+
 def SetGvVal():
-    globals()['g_intVal'] = 100
+    global g_intVal
+    g_intVal = 100
+    # globals()['g_intVal'] = 100
     print("file-1", globals()['g_intVal'])
