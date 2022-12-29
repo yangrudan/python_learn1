@@ -6,9 +6,21 @@
 @SoftWare:    PyCharm
 @brief:       功能简介
 """
+
+
+'''
 from GV import g_intVal
 # globals()['g_intVal'] = globals()['g_intVal']+100
 # print("file-1", globals()['g_intVal'])
 
 def GetGvVal3():
     print("file-import3", globals()['g_intVal'])
+    
+'''
+
+import GV
+
+
+def GetGvVal3():
+    val = GV.getVal()
+    print("get file 3", val)

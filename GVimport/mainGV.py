@@ -12,14 +12,16 @@ from GV_import2 import GetGvVal2
 from GV_import3 import GetGvVal3
 import threading
 import time
+import GV
 
 if __name__ == '__main__':
+    GV.init()
     t1 = threading.Thread(target=SetGvVal, args=())
     t1.start()
-    time.sleep(3)
+    # time.sleep(3)
     t2 = threading.Thread(target=GetGvVal2, args=())
     t2.start()
-    time.sleep(3)
+    # time.sleep(3)
     t3 = threading.Thread(target=GetGvVal3, args=())
     t3.start()
     print("end", '='*40)

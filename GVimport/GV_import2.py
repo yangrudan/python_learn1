@@ -6,7 +6,7 @@
 @SoftWare:    PyCharm
 @brief:       功能简介
 """
-
+'''
 from GV import g_intVal
 
 def GetGvVal2():
@@ -15,3 +15,11 @@ def GetGvVal2():
     # print("file-import2", globals()['g_intVal'])
 # globals()['g_intVal'] = globals()['g_intVal']+100
 # print("file-1", globals()['g_intVal'])
+
+'''
+
+import GV
+
+def GetGvVal2():
+    val = GV.getVal()
+    print("get file 2", val)
