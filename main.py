@@ -12,10 +12,14 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    print(randint(1,7))
-    a, b = 1,3
-    print(a)
-    print(b)
+    while True:
+        for i in range(3):
+            print(i)
+            if i == 2:
+                print("this is break")
+                break
+        else:
+            print("正常走完else~~~~")  # for循环正常走完，就会走else
+    print("End")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
