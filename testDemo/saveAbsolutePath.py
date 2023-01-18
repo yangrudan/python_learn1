@@ -7,11 +7,14 @@
 @brief:       绝对路径存储
 """
 
+
 import os
 
 if __name__ == '__main__':
     path = "name.txt"
-    open(path, 'w')
+    res = os.path.join("", path)
+    print(res)
+    open(res, 'w')
 
 
 
@@ -22,7 +25,7 @@ if __name__ == '__main__':
 
 
 
-    # res = os.path.join("../class_study", path)
-    # print(res)
-    # open(res, 'w')
+
+
+
 
