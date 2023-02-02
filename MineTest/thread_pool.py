@@ -15,7 +15,7 @@ import time
 def action(max):
     my_sum = 0
     for i in range(max):
-        print(threading.current_thread().name + '  ' + str(i))
+        # print(threading.current_thread().name + '  ' + str(i))
         my_sum += i
     return my_sum
 # 创建一个包含2条线程的线程池
