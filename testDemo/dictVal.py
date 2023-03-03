@@ -24,3 +24,11 @@ print(ins1.clsvar)
 print(ins2.clsvar) # ins1实例改变类变量不会影响ins2实例
 print(cls.__dict__) #类的__dict__属性
 print(ins1.__dict__) # 实例对象ins1的__dict__属性
+
+my_dict = {}
+my_dict["name"] = "yang"
+my_dict["age"] = 27
+for item in my_dict:
+    print(item)
+    print(my_dict[item])
+    print("++")
