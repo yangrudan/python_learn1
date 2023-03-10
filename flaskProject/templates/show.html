@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制块展示</title>
+</head>
+<body>
+
+<ul>
+{% for places in place %}
+    {% if places=='北京' %}
+        <li> {{ places }} </li>
+    {% else  %}
+        <a href="">{{ places }}</a>
+    {% endif %}
+{% endfor %}
+</ul>
+
+</body>
+</html>

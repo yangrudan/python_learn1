@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{{ url_for('hello_world') }}" method="post" enctype="multipart/form-data">
+        {{ myform.csrf_token }}  {#渲染csrf#}
+        <p>{{ myform.file.label }}{{ myform.file }}</p>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
