@@ -26,6 +26,7 @@ data2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])   # (3, 3)
 print(data2.shape)  # (3, 3)
 
 data3 = np.arange(1, 28, 1)
+print("位置索引", np.where(data3 == 7))
 data4 = data3.reshape(3, 3, 3)
 print(data4)
 """ [data4]
