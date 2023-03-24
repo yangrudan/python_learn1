@@ -19,7 +19,7 @@ damai_url = "https://www.damai.cn/"
 # 登录页
 login_url = "https://passport.damai.cn/login?ru=https%3A%2F%2Fwww.damai.cn%2F"
 # 抢票目标页
-target_url = 'https://www.damai.cn/?spm=a2oeg.project.top.dhome.4fb92c92k8hDWD'
+target_url = 'https://m.damai.cn/app/dmfe/select-seat-biz/kylin.html?itemId=703582352440&userPromotion=true&toDxOrder=true&quickBuy=0&privilegeActId=&channel=damai_app&performId=211088773&skuId=5129875055278&projectId=213875004'
 
 class Concert:
     def __init__(self):
@@ -124,7 +124,7 @@ class Concert:
                     # print('###未跳转到订单结算界面###')
                     """"""
                 title = self.driver.title
-                if title == '选座购买':
+                if title == '选择座位':
                     # 实现选座位购买的逻辑
                     self.choice_seats()
                 elif title == '确认订单':
@@ -136,7 +136,7 @@ class Concert:
                             break
 
     def choice_seats(self):
-        while self.driver.title == '选座购买':
+        while self.driver.title == '选择座位':
             while self.isElementExist('//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/img'):
                 # 座位手动选择 选中座位之后//*[@id="app"]/div[2]/div[2]/div[1]/div[2]/img 就会消失
                 print('请快速的选择您的座位！！！')
