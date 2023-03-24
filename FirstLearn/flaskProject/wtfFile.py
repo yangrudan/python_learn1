@@ -25,7 +25,7 @@ def hello_world():
     if myform.validate_on_submit():          #检查是否是一个POST请求并且请求是否有效
         filename=myform.file.data.filename    #获取传入的文件名
         filepath=os.path.dirname(os.path.abspath(__file__))       #获取当前项目的文件路径
-        savepath=os.path.join(filepath,'static')      #设置保存文件路径
+        savepath=os.path.join(filepath, 'static')      #设置保存文件路径
         myform.file.data.save(os.path.join(savepath,filename))    #保存文件
         return '提交成功'
     return render_template('file.html', myform=myform) #使用render_template()方法渲染file.html文件并将myform传递到file.html中

@@ -5,7 +5,6 @@
 @FileName:    mainClient.py
 @SoftWare:    PyCharm
 """
-import time
 
 import ActorTcpClient
 import class2Json

@@ -11,7 +11,6 @@ from GV_import1 import SetGvVal
 from GV_import2 import GetGvVal2
 from GV_import3 import GetGvVal3
 import threading
-import time
 import GV
 
 if __name__ == '__main__':

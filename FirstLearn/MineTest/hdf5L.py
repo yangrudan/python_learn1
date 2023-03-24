@@ -19,7 +19,7 @@ with h5py.File("data.hdf5", "w") as f:
 import os
 import h5py
 import numpy as np
-path = './tmp/out.h5'
+path = 'tmp/out.h5'
 os.remove(path)
 with h5py.File(path,"a") as f:
     dset = f.create_dataset('voltage284', (10**5,), maxshape=(None,),

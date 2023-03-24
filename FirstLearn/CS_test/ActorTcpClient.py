@@ -32,7 +32,7 @@ class ActorTcpClient:
     def exit(self):
         '''先退出队列数据处理线程（发送特定paraName的结构体）'''
         time.sleep(1)
-        info = class2Json.SubscribeInfo(paraName="EXIT", timeStart=20223,errInfo="I am exit")
+        info = class2Json.SubscribeInfo(paraName="EXIT", timeStart=20223, errInfo="I am exit")
         strData = class2Json.wrapCls(info)
         self.send(str(strData).encode())
 
