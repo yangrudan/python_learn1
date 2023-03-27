@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+{#设置页面比例#}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="height: 100%">
+<div id="container" style="height: 100%"></div>
+{#设置盒子模型比例#}
+<script type="text/javascript" src="../static/echarts%20(1).js"></script>
+<script type="text/javascript">
+
+    // 1.实例化对象
+    var  dom = document.getElementById("container");
+    var myecharts = echarts.init(dom);
+
+    // 2.从数据库中取出数据
+    var data1 = [{% for item in sheets %}'{{ item.name }}',{% endfor %}];
+    var data2 = [{% for item in sheets %}'{{ item.age }}',{% endfor %}];
+
+    // 3.配置参数
+    var option  = null;
+    option = {
+        color:['#3398DB'],        // 颜色
+        tooltip:{                 // 提示框组件
+            show:true,
+            trigger:'axis',       // 触发类型
+            axisPointer:{         // 坐标轴指示器配置项
+                type:'shadow'
+            }
+        },
+        grid:{
+            left:'3%',
+            right:'4%',
+            top:'3%',
+            bottom:'3%',
+            containLabel:true      // grid 区域是否包含坐标轴的刻度标签
+        },
+        xAxis:[                    // x轴
+            {
+                type: 'category',  // 类型  --- 类别型
+                data:data1,        // 数据
+                axisTick:{         // x轴刻度
+                    alignWithLabel:true   // 类目轴中在 boundaryGap 为 true 的时候有效，可以保证刻度线和标签对齐。
+                }
+            }
+        ],
+        yAxis:[                    // y轴
+            {
+                type:'value'
+            }
+        ],
+        series:[                   // 系列列表。每个系列通过 type 决定自己的图表类型
+            {
+                name:'直接访问',    // 系列名称，用于tooltip的显示，legend 的图例筛选，在 setOption 更新数据和配置项时用于指定对应的系列。
+                type:'bar',        // 类型 --- 柱状图
+                data:data2,
+                borderWidth:'60%'
+            }
+        ]
+    };
+
+    // 4.将配置的参数传递给echarts对象
+    if (option && typeof option == 'object'){
+        myecharts.setOption(option);
+    }
+</script>
+</body>
+</html>
