@@ -13,24 +13,12 @@ from flask_sqlalchemy import SQLAlchemy
 import pymysql
 pymysql.install_as_MySQLdb()
 
-# 2.创建flask应用对象
 app = Flask(__name__)
-
-
-# 3.配置sqlalchemy的参数
-class Config(object):
-    SQLALCHEMY_DATABASE_URI = "mysql://root:123456@127.0.0.1:3306/mydatabase3"
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
-
-
-# 4.将参数传入flask对象
-app.config.from_object(Config)
-
-# 5.利用SQLAlchemy中传入app参数实例化Flask对象
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:123456@127.0.0.1:3306/testDB"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 db = SQLAlchemy(app)
 
 
-# 6.创建数据库模型制作表
 class sheets(db.Model):
     __tablename__ = "bar01"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
