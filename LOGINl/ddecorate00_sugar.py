@@ -30,6 +30,10 @@ def sleep_5s():
 
 @how_much_time
 def sleep_6s():
+    """
+    6s
+    :return:
+    """
     time.sleep(6)
     print("%d秒结束了" % (6,))
 
@@ -38,3 +42,4 @@ t1 = threading.Thread(target=sleep_5s)
 t2 = threading.Thread(target=sleep_6s)
 t1.start()
 t2.start()
+print(sleep_6s.__doc__)

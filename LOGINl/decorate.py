@@ -54,3 +54,4 @@ def bar():
 
 foo()
 bar()
+print(bar.__doc__)  # 使用装饰器
