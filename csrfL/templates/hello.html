@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{ message|safe }}</p>
+<form name="loginform" method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.submit_button() }}
+</form>
+</body>
+</html>
