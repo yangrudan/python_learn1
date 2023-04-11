@@ -34,9 +34,11 @@ db_session = scoped_session(sessionmaker(autocommit=False,
 Base = declarative_base()
 Base.query = db_session.query_property()
 
+
 # 创建数据库
 def init_db():
     Base.metadata.create_all(bind=engine)
+
 
 # 创建模型
 class RolesUsers(Base):
@@ -45,11 +47,13 @@ class RolesUsers(Base):
     user_id = Column('user_id', Integer(), ForeignKey('user.id'))
     role_id = Column('role_id', Integer(), ForeignKey('role.id'))
 
+
 class Role(Base, RoleMixin):
     __tablename__ = 'role'
     id = Column(Integer(), primary_key=True)
     name = Column(String(80), unique=True)
     description = Column(String(255))
+
 
 class User(Base, UserMixin):
     __tablename__ = 'user'
@@ -67,9 +71,11 @@ class User(Base, UserMixin):
     roles = relationship('Role', secondary='roles_users',
                          backref=backref('users', lazy='dynamic'))
 
+
 # 设置flask-security
 user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
 security = Security(app, user_datastore)
+
 
 # 创建测试用户
 @app.before_first_request
@@ -84,11 +90,13 @@ def create_user():
         print('提交数据')
         db_session.commit()
 
+
 # 创建视图
 @app.route('/')
 @login_required
 def home():
     return 'you\'re logged in!'
+
 
 @app.route('/api')  #
 @http_auth_required
@@ -96,6 +104,7 @@ def home():
 def token_protected():
     return 'you\'re logged in by Token!'
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
+    app.before_first_request(create_user)
     app.run()
