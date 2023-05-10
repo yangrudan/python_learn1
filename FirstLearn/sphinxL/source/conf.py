@@ -6,8 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'mySphinxL'
-copyright = '2022, Cookie'
+project = 'Log Analysis'
+copyright = '2023, Cookie'
 author = 'Cookie'
 release = 'V1.0'
 
@@ -15,9 +15,11 @@ release = 'V1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['myst_parser']
+html_theme = 'sphinx_rtd_theme'
 
 source_suffix = {
-    ".md": "markdown"
+    ".md": "markdown",
+    ".rst": "restructuredtext"
 }
 
 templates_path = ['_templates']

@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="介绍" href="intro.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>mySphinxL V1.0 文档</title>
+        <title>Log Analysis V1.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">mySphinxL V1.0 文档</div></a>
+      <a href="#"><div class="brand">Log Analysis V1.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
   
   
-  <span class="sidebar-brand-text">mySphinxL V1.0 文档</span>
+  <span class="sidebar-brand-text">Log Analysis V1.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -154,7 +154,13 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function.html">功能</a></li>
+</ul>
+
 </div>
 </div>
 
@@ -187,9 +193,35 @@
           </label>
         </div>
         <article role="main">
-          <section id="test-sphinx">
-<h1>Test Sphinx<a class="headerlink" href="#test-sphinx" title="此标题的永久链接">#</a></h1>
-<p>“2022-12-17”</p>
+          <section id="loki">
+<h1>Loki日志分析平台调研报告<a class="headerlink" href="#loki" title="此标题的永久链接">#</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#loki">1. loki简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#id2">2. loki架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#id3">参考链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">环境搭建</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#id2">1. 下载安装包</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#loki">2. Loki安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#promtail">3. promtail安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#grafana">4. Grafana安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#id3">5. 启动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#grfana">进入Grfana界面</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="function.html">功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function.html#id2">1. 链接数据源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function.html#dashboard">2. 添加Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function.html#glog">3. Glog面板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function.html#pythonweb">4. python在Web中调用</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 
         </article>
@@ -197,13 +229,21 @@
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="intro.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">介绍</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2022, Cookie
+                Copyright &#169; 2023, Cookie
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
