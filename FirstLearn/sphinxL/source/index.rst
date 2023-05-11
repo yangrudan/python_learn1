@@ -3,15 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Loki日志分析平台调研报告
+Loki日志分析平台调研报告V1.0
 =====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    intro.md
    environment.md
    function.md
+   user_step.md
+
 
 

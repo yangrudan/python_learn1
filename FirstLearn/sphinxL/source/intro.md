@@ -1,5 +1,4 @@
-# 介绍
-
+# 一、介绍
 
 ## 1. loki简介
 **Loki**是由Grafana Labs团队开源的的多租户日志聚合系统。 开发语言: Google Go。使用标签来作为索引，而不是对全文进行检索。系统架构由以下3个部分组成 ：
@@ -26,5 +25,5 @@
 让查询器完成大部分繁重的工作。给定一个时间范围和标签选择器，它会查看索引以确定哪些块匹配，然后通过它们进行 greps 以提供结果。它还与Ingester对话以获取尚未刷新的最新数据。
 ![img_18.png](img_18.png)
 
-## 参考链接
+## 3. 参考链接
 [Loki: open source logging for cloud natives](https://grafana.com/blog/2018/12/12/loki-prometheus-inspired-open-source-logging-for-cloud-natives/)

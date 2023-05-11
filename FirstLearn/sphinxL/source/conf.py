@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Log Analysis'
-copyright = '2023, Cookie'
-author = 'Cookie'
+copyright = '2023, Cookie Yang'
+author = 'Cookie Yang'
 release = 'V1.0'
 
 # -- General configuration ---------------------------------------------------

@@ -1,4 +1,4 @@
-# 环境搭建
+# 二、环境搭建
 
 ## 1. 下载安装包
 ```commandline
@@ -119,6 +119,6 @@ systemctl start grafana-server
 systemctl status grafana-server
 ```
 
-## 进入Grfana界面
+## 6. 进入Grafana界面
 
 ![img_19.png](img_19.png)
