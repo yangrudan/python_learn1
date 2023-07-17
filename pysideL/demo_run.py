@@ -7,13 +7,13 @@
 @brief:       功能简介
 """
 import sys
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow
 # 导入我们生成的界面
 from demo_ui import Ui_MainWindow
 
 
 # 继承QWidget类，以获取其属性和方法
-class MyWidget(QWidget):
+class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
 
