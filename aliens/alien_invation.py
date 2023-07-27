@@ -6,6 +6,8 @@
 @SoftWare:    PyCharm
 @brief:       功能简介： 启动游戏，资源管理
 """
+import time
+
 import pygame
 import sys
 
@@ -59,7 +61,10 @@ class AlienInvation:
         pygame.display.flip()
 
     def run_game(self):
+        clock = pygame.time.Clock()
+        clock.tick(30)
         while True:
+            time.sleep(3)
             self._check_events()
             self.ship.update()
             self._update_screen()
