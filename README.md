@@ -1,68 +1,72 @@
 # python_learn1
 首次学习python历程
+
 [toc]
 
 ***
 
-# AI
+# AI   [prompt]
 
 # FirstLearn
 
-   CS_test
+   CS_test   [tcp client server]
 
-   GVimport
+   GVimport   [全局变量]
 
-   Mine Test
+   Mine Test   [callback hdf5 thread_pool]
 
-   Queue_test
+   Queue_test   [thread ququq]
 
-   autoTest
+   autoTest   [enum]
 
-   class_study
+   class_study   [car]
 
-   dbL
+   dbL   [pymsql  mysql.connector]
 
    flask
 
-   flaskProject
+   flaskProject   [地点 mail wtf]
 
-   loggingMy
+   loggingMy   [log]
 
    numpy_
 
-   python2
+   python2   [大麦 几数之和 thread]
 
-   requestL
+   requestL   [SMTP协议mail requesu下载]
 
    singletonL
 
    sphinxL
 
-   testDemo
+   testDemo   [可乐 打印 字典 ...]
 
-   writeEffectve
+   writeEffectve   [w a r rb ab]
+
+   yeild
 
 # SecondLearn
    LOGINI
 
-   PRG
+   PRG      [Post/Redirect/Get (PRG) 模式]
 
-   Sql
+   Sql      [testDB绘制bar图]
 
-   TODO
+   TODO      [sqlite数据库创建用户角色]
 
-   csrf2_L
+   csrf2_L   [crsf_token]
 
-   csrf
-   decorate
+   csrf   [class Hello, token]
+   
+   decorate   [装饰器]
 
-# aliens
+# aliens   [pygame游戏]
 
-# counter_time
+# counter_time   [计时器]
 
 # djangoL
 
-# ending_the_game
+# ending_the_game   [alien game]
 
 # hdf5L
 
@@ -74,5 +78,5 @@
 
 # plt
 
-# pysideL
+# pysideL   [QT]
 
