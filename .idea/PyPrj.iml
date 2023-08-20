@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python facet">
-      <configuration sdkName="Python 3.10 (PyPrj) (2)" />
+      <configuration sdkName="Python 3.8 (python_learn1)" />
     </facet>
   </component>
   <component name="NewModuleRootManager">
@@ -11,6 +11,6 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Python 3.10 (PyPrj) (2) interpreter library" level="application" />
+    <orderEntry type="library" name="Python 3.8 (python_learn1) interpreter library" level="application" />
   </component>
 </module>
