@@ -19,9 +19,9 @@ data = {
 }
 
 
-out_list = [data] * 2
+out_list = [data] * 1
 
-json_str = json.dumps(out_list)
+json_str = json.dumps(out_list, indent=6)
 
 out_file = open("myfile.json", "w") 
 json.dump(out_list, out_file) 
