@@ -13,7 +13,7 @@ import time
 def SigIntHand(SIG, FRM):
     print("Please Right click-copy. Ctrl-C does not work on the cmd prompt")
 
-# signal.signal(signal.SIGINT, SigIntHand)
+signal.signal(signal.SIGINT, SigIntHand)
 while 1:
     print("222")
     time.sleep(2)
