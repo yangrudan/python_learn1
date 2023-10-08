@@ -1,12 +1,20 @@
 from decimal import Decimal
 import json
+import os
 from pprint import pprint
 
 import numpy as np
 result = np.linspace(0, 512*1.2, 512).tolist()  # 精度不好看
 
+
+if os.path.exists("myfile.json"):
+    read_fp = open("myfile.json","r")
+    list_data = json.load(read_fp)
+else:
+    list_data=[]
+
 data = {
-    "array_name": "array-1",
+    "array_name": "array-2",
     "sensor_num": 512,
     "connector_pos": 32,
     "sampling_rate": 5000,
@@ -18,13 +26,12 @@ data = {
 
 }
 
+list_data.append(data)
 
-out_list = [data] * 1
-
-json_str = json.dumps(out_list, indent=6)
+json_str = json.dumps(list_data, indent=6)
 
 out_file = open("myfile.json", "w") 
-json.dump(out_list, out_file) 
+json.dump(list_data, out_file) 
 out_file.close()
 
 pprint(json_str)
