@@ -1,13 +1,20 @@
-"""
-Copyright (c) Cookie Yang. All right reserved.
-"""
-import requests
+from flask import Flask
+from flask_restful import Api, Resource
+from flasgger import Swagger, swag_from
 
-data = {'username': '002438',
-        'password': "13141996jyD"}
-headers = {'user-agent': 'my-app/0.0.1'}
-response = requests.post("https://portal.zhejianglab.com/oa/home/login", data=data, headers=headers)
-if response.ok:
-    print(response.text)
-else:
-    print("请求失败")
+app = Flask(__name__)
+api = Api(app)
+
+# 创建一个简单的 API
+class HelloWorld(Resource):
+    @swag_from("demo.yml")
+    def get(self):
+        return {'hello': 'world'}
+
+api.add_resource(HelloWorld, '/')
+
+# 配置 Swagger
+swagger = Swagger(app)
+
+if __name__ == '__main__':
+    app.run(debug=True)
